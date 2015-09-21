@@ -161,8 +161,8 @@ jQuery(document).ready(function(){
 		setTimeout(function() {
 
 
-			$contactform.slideUp();
-			var response = '<div class="error">Something went wrong :( Try b@rtjansen.nl instead.</div>';
+			// $contactform.slideUp();
+			var response = '<div class="error">Whoa! I got lazy and never implemented this..  Try <a href="mailto:b@rtjansen.nl">b@rtjansen.nl</a> instead.</div>';
 			
 			// Hide any previous response text
 			$(".error,.success").remove();
