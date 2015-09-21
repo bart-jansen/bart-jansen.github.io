@@ -154,28 +154,41 @@ jQuery(document).ready(function(){
 	/* ---------------------------------------------------------------------- */
 
 	// Needed variables
-	var $contactform 	= $('#contactform'),
-		$success		= 'Your message has been sent. Thank you!';
+	var $contactform 	= $('#contactform');
+		// $success		= 'Your message has been sent. Thank you!';
 
 	$contactform.submit(function(){
-		$.ajax({
-		   type: "POST",
-		   url: "contact.php",
-		   data: $(this).serialize(),
-		   success: function(msg) {
-				if(msg == 'SEND') {
-					$contactform.slideUp();
-					response = '<div class="success">'+ $success +'</div>';
-				}
-				else {
-					response = '<div class="error">'+ msg +'</div>';
-				}
-				// Hide any previous response text
-				$(".error,.success").remove();
-				// Show response message
-				$("#contact-status").html(response);
-			}
-		 });
+		setTimeout(function() {
+
+
+			$contactform.slideUp();
+			var response = '<div class="error">Something went wrong :( Try b@rtjansen.nl instead.</div>';
+			
+			// Hide any previous response text
+			$(".error,.success").remove();
+			// Show response message
+			$("#contact-status").html(response);
+
+		}, 100);
+
+		// $.ajax({
+		//    type: "POST",
+		//    url: "contact.php",
+		//    data: $(this).serialize(),
+		//    success: function(msg) {
+		// 		if(msg == 'SEND') {
+		// 			$contactform.slideUp();
+		// 			response = '<div class="success">'+ $success +'</div>';
+		// 		}
+		// 		else {
+		// 			response = '<div class="error">'+ msg +'</div>';
+		// 		}
+		// 		// Hide any previous response text
+		// 		$(".error,.success").remove();
+		// 		// Show response message
+		// 		$("#contact-status").html(response);
+		// 	}
+		//  });
 		return false;
 	});
 	/* ---------------------------------------------------------------------- */
