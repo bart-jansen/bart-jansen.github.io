@@ -1,6 +1,6 @@
 var map;
 
-jQuery(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function() {
 	var $logo 	= $('#logo');
 
 	// Show logo
@@ -163,7 +163,7 @@ jQuery(document).ready(function(){
 
 			// $contactform.slideUp();
 			var response = '<div class="error">Whoa! I got lazy and never implemented this..  Try <a href="mailto:b@rtjansen.nl">b@rtjansen.nl</a> instead.</div>';
-			
+
 			// Hide any previous response text
 			$(".error,.success").remove();
 			// Show response message
