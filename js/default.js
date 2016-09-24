@@ -244,8 +244,8 @@ function startGmap() {
 		});
 
 		 map.addMarker({
-			lat: 52.100070,
-			lng: 5.119874
+			lat: 52.100080,
+			lng: 5.119884
 		});
 	}
 }
