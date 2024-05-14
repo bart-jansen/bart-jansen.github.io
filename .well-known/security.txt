@@ -1,0 +1,5 @@
+Contact: mailto:b@rtjansen.nl
+Encryption: https://bart.je/.well-known/pgp-key.txt
+Expires: 2025-04-05T13:37:00.000Z
+Preferred-Languages: en,nl
+Canonical: https://bart.je/.well-known/security.txt
