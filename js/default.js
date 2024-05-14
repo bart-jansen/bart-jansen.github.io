@@ -258,8 +258,8 @@ function socialHighlight() {
 			$('.social-twitter').animate({backgroundColor: '#222'}, speed);
 			$('.social-in').animate({backgroundColor: '#0075a1'}, speed, function() {
 				$('.social-in').animate({backgroundColor: '#222'}, speed);
-				$('.social-googleplus').animate({backgroundColor: '#d94a38'}, speed, function() {
-					$('.social-googleplus').animate({backgroundColor: '#222'}, speed);
+				$('.social-gh').animate({backgroundColor: '#d94a38'}, speed, function() {
+					$('.social-gh').animate({backgroundColor: '#222'}, speed);
 				});
 			});
 		});

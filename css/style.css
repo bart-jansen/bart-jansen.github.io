@@ -129,11 +129,15 @@ div.top {
 	height:30px;
 	background:#222 url('../img/social_twitter.png') no-repeat 5px 5px;
 }
-.social-googleplus {
+.social-gh {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/social_googleplus.png') no-repeat 5px 5px;
+	background-image: url(../img/social_gh.png);
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
 }
 .social-in {
 	float:left;
@@ -147,7 +151,7 @@ div.top {
 .social-twitter:hover {
 	background-color:#22b1e5;
 }
-.social-googleplus:hover {
+.social-gh:hover {
 	background-color:#d94a38;
 }
 .social-in:hover {
@@ -185,6 +189,7 @@ div.top {
 	background: url(../img/photo.jpg) no-repeat;
 	height: 186px;
 	width: 153px;
+	background-size: cover;
 }
 
 .about .photo-inner img {
@@ -1049,8 +1054,8 @@ div.footer .pdf_icon {
 		background-image: url('../img/hr/social_twitter.png');
 		background-size: 20px 20px;
 	}
-	.social-googleplus {
-		background-image: url('../img/hr/social_googleplus.png');
+	.social-gh {
+		background-image: url('../img/hr/social_gh.png');
 		background-size: 20px 20px;
 	}
 
