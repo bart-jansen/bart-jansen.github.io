@@ -140,15 +140,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		'overlayOpacity'	:   0.6
 	});
 
-	// Portfolio image animation (non touch devices only)
-	if(!isTouchDevice()) {
-		$container.find('img').adipoli({
-			'startEffect' 	: 'transparent',
-			'hoverEffect' 	: 'normal',
-			'imageOpacity' 	: 0.6
-		});
-	}
-
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
@@ -195,9 +186,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	/*	Google Maps
 	/* ---------------------------------------------------------------------- */
 	//load without tab select (=refresh)
-	if(window.location.hash == "#contact") {
-		startGmap();
-	}
+	// if() {
+	// 	startGmap();
+	// }
 
 	//load with after tab select load
 	$content.bind('easytabs:after', function(evt,tab,panel) {
@@ -206,47 +197,45 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
   	});
 
-	if(isTouchDevice()) {
-		socialHighlight();
-	}
-
-	var hr = "";
-
-	//check if high density pixel screen
-	if(window.devicePixelRatio && window.devicePixelRatio > 1) {
-		hr = "hr/";
-	}
+	// if(isTouchDevice()) {
+		// socialHighlight();
+	// }
 
 	//preload hover-on images
 	preload([
-		'img/'+hr+'contact-icon-active.png',
-		'img/'+hr+'education-icon-active.png',
-		'img/'+hr+'portfolio-icon-active.png',
-		'img/'+hr+'profile-icon-active.png',
-		'img/'+hr+'resume-icon-active.png'
+		'img/hr/contact-icon-active.png',
+		'img/hr/education-icon-active.png',
+		'img/hr/portfolio-icon-active.png',
+		'img/hr/profile-icon-active.png',
+		'img/hr/resume-icon-active.png'
 	]);
 });
 
 function startGmap() {
-	if($("#map").children().length === 0) {
-		map = new GMaps({
-			el: '#map',
-			lat: 52.100070,
-			lng: 5.119874,
+	if($("#map").children().length === 0 && window.location.hash == "#contact") {
+		// Map options
+		var options = {
 			zoom: 12,
-			draggable: ($(window).width() < 600 && isTouchDevice() ? false : true),
+			center: {lat: 52.100070, lng: 5.119874},
+			draggable: window.innerWidth >= 600,
 			scrollwheel: false,
-			zoomControl : true,
-			panControl : false,
-			streetViewControl : false,
+			zoomControl: true,
+			panControl: false,
+			streetViewControl: false,
 			mapTypeControl: false,
-			overviewMapControl: true
+			overviewMapControl: true,
+			mapId: 'map',
+		};
+	
+		// New map
+		var map = new google.maps.Map(document.getElementById('map'), options);
+	
+		// Add marker
+		var marker = new google.maps.marker.AdvancedMarkerElement({
+			position: {lat: 52.100080, lng: 5.119884},
+			map: map
 		});
-
-		 map.addMarker({
-			lat: 52.100080,
-			lng: 5.119884
-		});
+		
 	}
 }
 
@@ -267,7 +256,7 @@ function socialHighlight() {
 
 	setTimeout(function(){
 		socialHighlight()
-	},12000);
+	},10000);
 }
 
 function isTouchDevice() {

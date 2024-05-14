@@ -121,19 +121,21 @@ div.top {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/social_facebook.png') no-repeat 5px 5px;
+	background:#222 url('../img/hr/social_facebook.png') no-repeat 5px 5px;
+	background-size: 20px 20px;
 }
 .social-twitter {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/social_twitter.png') no-repeat 5px 5px;
+	background:#222 url('../img/hr/social_twitter.png') no-repeat 5px 5px;
+	background-size: 20px 20px;
 }
 .social-gh {
 	float:left;
 	width:30px;
 	height:30px;
-	background-image: url(../img/social_gh.png);
+	background-image: url(../img/hr/social_gh.png);
     background-color: #222;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -143,7 +145,8 @@ div.top {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/social_in.png') no-repeat 5px 3px;
+	background:#222 url('../img/hr/social_in.png') no-repeat 5px 3px;
+	background-size: 20px 20px;
 }
 .social-facebook:hover {
 	background-color:#3b5998;
@@ -186,7 +189,8 @@ div.top {
 	padding:12px 0 0 20px;
 }
 .about #photo {
-	background: url(../img/photo.jpg) no-repeat;
+	background-image: url(../img/hr/photo.jpg);
+	background-size: 153px 186px;
 	height: 186px;
 	width: 153px;
 	background-size: cover;
@@ -280,41 +284,47 @@ div.top {
 	color:#fdc62a;
 }
 .tabs li .tab-profile {
-	background-image:url(../img/profile-icon.png);
+	background-image: url(../img/hr/profile-icon.png);
+	background-size: 50px 38px;
 	background-position:center 35px;
 }
 .tabs li .tab-resume {
-	background-image:url(../img/resume-icon.png);
+	background-image: url(../img/hr/resume-icon.png);
+	background-size: 50px 43px;
 	background-position:center 30px;
 }
 .tabs li .tab-education {
-	background-image:url(../img/education-icon.png);
+	background-image:url(../img/hr/education-icon.png);
+	background-size: 69px 40px;
 	background-position:center 33px;
+
 }
 
 .tabs li .tab-portfolio {
-	background-image:url(../img/portfolio-icon.png);
+	background-image:url(../img/hr/portfolio-icon.png);
+	background-size: 46px 43px;
 	background-position:center 30px;
 }
 .tabs li .tab-contact {
-	background-image:url(../img/contact-icon.png);
+	background-image:url(../img/hr/contact-icon.png);
+	background-size: 48px 34px;
 	background-position:center 39px;
 }
 /* Active icons */
 	.tabs .active .tab-profile {
-	background-image:url(../img/profile-icon-active.png);
+	background-image:url(../img/hr/profile-icon-active.png);
 }
 .tabs .active .tab-resume {
-	background-image:url(../img/resume-icon-active.png);
+	background-image:url(../img/hr/resume-icon-active.png);
 }
 .tabs .active .tab-education {
-	background-image:url(../img/education-icon-active.png);
+	background-image:url(../img/hr/education-icon-active.png);
 }
 .tabs .active .tab-portfolio {
-	background-image:url(../img/portfolio-icon-active.png);
+	background-image:url(../img/hr/portfolio-icon-active.png);
 }
 .tabs .active .tab-contact {
-	background-image:url(../img/contact-icon-active.png);
+	background-image:url(../img/hr/contact-icon-active.png);
 }
 /*-------------------------------------------------------*/
 	/* Resume Section */
@@ -399,34 +409,41 @@ div.top {
 	font-size:15px;
 	color: #444;
 }
+
+
+
 .skills li .rat0, .skills li .rat1, .skills li .rat2, .skills li .rat3, .skills li .rat4, .skills li .rat5, .skills li .rat6, .skills li .rat7 {
 	width:123px;
 	height:14px;
 	float:left;
 }
-.skills li .rat0 {
-	background:url(../img/rats.png) no-repeat;
-}
+
 .skills li .rat1 {
-	background:url(../img/rats.png) no-repeat 0px -14px;
+	background-position: 0px -14px;
 }
 .skills li .rat2 {
-	background:url(../img/rats.png) no-repeat 0px -28px;
+	background-position: 0px -28px;
 }
 .skills li .rat3 {
-	background:url(../img/rats.png) no-repeat 0px -42px;
+	background-position: 0px -42px;
 }
 .skills li .rat4 {
-	background:url(../img/rats.png) no-repeat 0px -56px;
+	background-position: 0px -56px;
 }
 .skills li .rat5 {
-	background:url(../img/rats.png) no-repeat 0px -70px;
+	background-position: 0px -70px;
 }
 .skills li .rat6 {
-	background:url(../img/rats.png) no-repeat 0px -84px;
+	background-position: 0px -84px;
 }
 .skills li .rat7 {
-	background:url(../img/rats.png) no-repeat 0px -98px;
+	background-position: 0px -98px;
+}
+
+.skills li .rat0, .skills li .rat1, .skills li .rat2, .skills li .rat3, .skills li .rat4, .skills li .rat5, .skills li .rat6, .skills li .rat7 {
+	background-image: url('../img/hr/rats.png');	
+	background-size: 123px 112px;
+	background-repeat: no-repeat;
 }
 /*-------------------------------------------------------*/
 	/* Portfolio Section */
@@ -485,8 +502,16 @@ div.top {
 }
 #portfolio-list img {
 	background-color:#FFF;
+	opacity: 0.6;
+	transition: .5s ease;
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
 	height:130px;
 	width:195px;
+}
+#portfolio-list img:hover {
+	opacity: 1;
 }
 #portfolio-list li:hover .title {
 	color:#fdc62a;
@@ -646,7 +671,8 @@ div.footer .cv {
 }
 div.footer .pdf_icon {
 	float:right;
-	background: url(../img/pdf.png);
+	background: url(../img/hr/pdf.png);
+	background-size: 14px 17px;
 	height: 17px;
 	width: 14px;
 }
@@ -983,87 +1009,4 @@ div.footer .pdf_icon {
 	.contact-info, .contact-form {
 		padding:0 10px;
 	}
-}
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	   only screen and (min--moz-device-pixel-ratio: 1.5),
-	   only screen and (min-device-pixel-ratio: 1.5){
-
-	.about #photo {
-		background-image: url(../img/hr/photo.jpg);
-		background-size: 153px 186px;
-	}
-
-	/* tabs */
-	.tabs li .tab-profile {
-		background-image: url(../img/hr/profile-icon.png);
-		background-size: 50px 38px;
-	}
-	.tabs .active .tab-profile {
-		background-image:url(../img/hr/profile-icon-active.png);
-	}
-
-	.tabs li .tab-resume {
-		background-image: url(../img/hr/resume-icon.png);
-		background-size: 50px 43px;
-	}
-	.tabs .active .tab-resume {
-		background-image:url(../img/hr/resume-icon-active.png);
-	}
-
-	.tabs li .tab-education {
-		background-image: url(../img/hr/education-icon.png);
-		background-size: 69px 40px;
-	}
-	.tabs .active .tab-education {
-		background-image:url(../img/hr/education-icon-active.png);
-	}
-
-	.tabs li .tab-portfolio {
-		background-image: url(../img/hr/portfolio-icon.png);
-		background-size: 46px 43px;
-	}
-	.tabs .active .tab-portfolio {
-		background-image:url(../img/hr/portfolio-icon-active.png);
-	}
-
-	.tabs li .tab-contact {
-		background-image: url(../img/hr/contact-icon.png);
-		background-size: 48px 34px;
-	}
-	.tabs .active .tab-contact {
-		background-image:url(../img/hr/contact-icon-active.png);
-	}
-
-
-	div.footer .pdf_icon {
-		background-image: url(../img/hr/pdf.png);
-		background-size: 14px 17px;
-
-	}
-
-	.social-facebook {
-		background-image: url('../img/hr/social_facebook.png');
-		background-size: 20px 20px;
-	}
-	.social-in {
-		background-image: url('../img/hr/social_in.png');
-		background-size: 20px 20px;
-	}
-	.social-twitter {
-		background-image: url('../img/hr/social_twitter.png');
-		background-size: 20px 20px;
-	}
-	.social-gh {
-		background-image: url('../img/hr/social_gh.png');
-		background-size: 20px 20px;
-	}
-
-
-	.skills li .rat0, .skills li .rat1, .skills li .rat2, .skills li .rat3, .skills li .rat4, .skills li .rat5, .skills li .rat6, .skills li .rat7 {
-		background-image: url('../img/hr/rats.png');
-		background-size: 123px 112px;
-	}
-
-
 }
