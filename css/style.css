@@ -255,6 +255,8 @@ div.top {
 	height:100px;
 	background-color:#ededed;
 	position:relative;
+	display: flex;
+	justify-content: center;
 }
 .tabs {
 	height:116px;
@@ -391,31 +393,35 @@ div.top {
 }
 /* Skills Section */
 .skills-section {
-	width:300px;
-}
-.skills {
-	margin-top:25px;
-	overflow:hidden;
-	height:100%;
-}
-.skills li {
-	margin-bottom:15px;
-	float:left;
-	padding-left:30px;
-}
-.skills li h4 {
-	width:140px;
-	float:left;
-	font-size:15px;
-	color: #444;
+	width: calc(100% - 520px);
 }
 
+.skills {
+	margin-top: 25px;
+	overflow: hidden;
+	height: 100%;
+}
+
+.skills li {
+	margin-bottom:15px;
+	float: left;
+	margin-left: 30px;
+	width: calc(100% - 30px);
+}
+
+.skills li h4 {
+	width: 140px;
+	float: left;
+	font-size: 15px;
+	color: #444;
+}
 
 
 .skills li .rat0, .skills li .rat1, .skills li .rat2, .skills li .rat3, .skills li .rat4, .skills li .rat5, .skills li .rat6, .skills li .rat7 {
 	width:123px;
 	height:14px;
-	float:left;
+	float:right;
+	/* margin-right: 40px; */
 }
 
 .skills li .rat1 {
@@ -776,7 +782,8 @@ div.footer .pdf_icon {
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	#container {
-		width:470px;
+		width:470px; /* fallback */
+		width: calc(100% - 40px);
 	}
 	.track {
 		display:none;
@@ -807,7 +814,8 @@ div.footer .pdf_icon {
 	/*-------------------------------------------------------*/
 	/* About */
 	.about {
-		width:420px;
+		width:420px; /* fallback */
+		width: calc(100% - 50px);
 		display:block;
 	}
 	.about h1 {
@@ -833,21 +841,21 @@ div.footer .pdf_icon {
 		padding-left:5px;
 	}
 	.tabs li > a {
-		width:90px;
+		width:88px;
 		font-size:15px;
 	}
 	.tabs li.active {
 		background: none;
 	}
 	.timeline-section {
-		width:420px;
+		width: 100%;
 		padding-right:60px;
 	}
 	/*-------------------------------------------------------*/
 		/* Resume */
 	/*-------------------------------------------------------*/
 	.skills-section {
-		width:420px;
+		width:100%;
 	}
 	.skills li h4 {
 		width:260px;
@@ -880,8 +888,8 @@ div.footer .pdf_icon {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 	#container {
-		width:300px;
-				margin-top:10px;
+		width: calc(100% - 25px);
+		margin-top:10px;
 	}
 	.track {
 		display:none;
@@ -973,11 +981,11 @@ div.footer .pdf_icon {
 		padding:10px;
 	}
 	.timeline-section {
-		width:280px;
+		width:100%;
 		padding-right:60px;
 	}
 	.skills-section {
-		width:280px;
+		width:100%;
 	}
 	.skills li h4 {
 		width:120px;
