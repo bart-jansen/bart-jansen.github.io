@@ -948,9 +948,10 @@ div.footer .pdf_icon {
 		margin-top:0;
 		display:block;
 		width:280px;
+		width:calc(100% - 40px);
 		background:none;
 		border-top:1px solid #fdc62a;
-		margin-left:10px;
+		margin-left:20px;
 		min-height:220px;
 		padding-left:0;
 	}
