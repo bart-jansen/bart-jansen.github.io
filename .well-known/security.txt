@@ -1,5 +1,5 @@
-Contact: mailto:info@bart.je
-Encryption: https://bart.je/.well-known/pgp-key.txt
+Contact: mailto:info@bartj.blog
+Encryption: https://me.bartj.blog/.well-known/pgp-key.txt
 Expires: 2025-04-05T13:37:00.000Z
 Preferred-Languages: en,nl
-Canonical: https://bart.je/.well-known/security.txt
+Canonical: https://me.bartj.blog/.well-known/security.txt
