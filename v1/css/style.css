@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	background-image:url(../img/bg.png);
+	background-image:url(../../img/bg.png);
 	background-color: #E8E8E8;
 	margin: 0px;
 	padding: 0px;
@@ -52,7 +52,7 @@ h5 {font-size: 13px;}
 h6 {font-size: 12px;}
 
 h3.main-heading {
-	background-image:url('../img/plus.png');
+	background-image:url('../../img/plus.png');
 	background-repeat: no-repeat;
 	background-size: 19px 19px;
 	background-position:left 2px;
@@ -121,21 +121,21 @@ div.top {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/hr/social_facebook.png') no-repeat 5px 5px;
+	background:#222 url('../../img/hr/social_facebook.png') no-repeat 5px 5px;
 	background-size: 20px 20px;
 }
 .social-twitter {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/hr/social_twitter.png') no-repeat 5px 5px;
+	background:#222 url('../../img/hr/social_twitter.png') no-repeat 5px 5px;
 	background-size: 20px 20px;
 }
 .social-gh {
 	float:left;
 	width:30px;
 	height:30px;
-	background-image: url(../img/hr/social_gh.png);
+	background-image: url(../../img/hr/social_gh.png);
     background-color: #222;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -145,7 +145,7 @@ div.top {
 	float:left;
 	width:30px;
 	height:30px;
-	background:#222 url('../img/hr/social_in.png') no-repeat 5px 3px;
+	background:#222 url('../../img/hr/social_in.png') no-repeat 5px 3px;
 	background-size: 20px 20px;
 }
 .social-facebook:hover {
@@ -167,8 +167,8 @@ div.top {
 	/* Profile Section */
 /*-------------------------------------------------------*/
 #profile {
-	background-image:url(../img/header-shadow.png), url(../img/header-bg.png);
-	background:url(../img/header-bg.png) repeat-x\0/; /* For ie8 */
+	background-image:url(../../img/header-shadow.png), url(../../img/header-bg.png);
+	background:url(../../img/header-bg.png) repeat-x\0/; /* For ie8 */
 	background-position:center bottom, left top;
 	background-repeat:repeat-x;
 	overflow:hidden;
@@ -183,13 +183,13 @@ div.top {
 }
 .about .photo-inner {
 	float:left;
-	background:url(../img/photo-inner.png) no-repeat;
+	background:url(../../img/photo-inner.png) no-repeat;
 	width:192px;
 	height:212px;
 	padding:12px 0 0 20px;
 }
 .about #photo {
-	background-image: url(../img/hr/photo.jpg);
+	background-image: url(../../img/hr/photo.jpg);
 	background-size: 153px 186px;
 	height: 186px;
 	width: 153px;
@@ -225,7 +225,7 @@ div.top {
 	width:310px;
 	min-height:230px;
 	margin-left:10px;
-	background:url(../img/personal-info-sep.png) no-repeat left top;
+	background:url(../../img/personal-info-sep.png) no-repeat left top;
 	padding:20px 0 0 20px;
 }
 .personal-info li {
@@ -279,53 +279,53 @@ div.top {
 	text-align:center;
 }
 .tabs li.active {
-	background:url('../img/tab-hover.png') no-repeat;
+	background:url('../../img/tab-hover.png') no-repeat;
 }
 .tabs li.active a {
 	color:#fdc62a;
 }
 .tabs li .tab-profile {
-	background-image: url(../img/hr/profile-icon.png);
+	background-image: url(../../img/hr/profile-icon.png);
 	background-size: 50px 38px;
 	background-position:center 35px;
 }
 .tabs li .tab-resume {
-	background-image: url(../img/hr/resume-icon.png);
+	background-image: url(../../img/hr/resume-icon.png);
 	background-size: 50px 43px;
 	background-position:center 30px;
 }
 .tabs li .tab-education {
-	background-image:url(../img/hr/education-icon.png);
+	background-image:url(../../img/hr/education-icon.png);
 	background-size: 69px 40px;
 	background-position:center 33px;
 
 }
 
 .tabs li .tab-portfolio {
-	background-image:url(../img/hr/portfolio-icon.png);
+	background-image:url(../../img/hr/portfolio-icon.png);
 	background-size: 46px 43px;
 	background-position:center 30px;
 }
 .tabs li .tab-contact {
-	background-image:url(../img/hr/contact-icon.png);
+	background-image:url(../../img/hr/contact-icon.png);
 	background-size: 48px 34px;
 	background-position:center 39px;
 }
 /* Active icons */
 	.tabs .active .tab-profile {
-	background-image:url(../img/hr/profile-icon-active.png);
+	background-image:url(../../img/hr/profile-icon-active.png);
 }
 .tabs .active .tab-resume {
-	background-image:url(../img/hr/resume-icon-active.png);
+	background-image:url(../../img/hr/resume-icon-active.png);
 }
 .tabs .active .tab-education {
-	background-image:url(../img/hr/education-icon-active.png);
+	background-image:url(../../img/hr/education-icon-active.png);
 }
 .tabs .active .tab-portfolio {
-	background-image:url(../img/hr/portfolio-icon-active.png);
+	background-image:url(../../img/hr/portfolio-icon-active.png);
 }
 .tabs .active .tab-contact {
-	background-image:url(../img/hr/contact-icon-active.png);
+	background-image:url(../../img/hr/contact-icon-active.png);
 }
 /*-------------------------------------------------------*/
 	/* Resume Section */
@@ -446,7 +446,7 @@ div.top {
 }
 
 .skills li .rat0, .skills li .rat1, .skills li .rat2, .skills li .rat3, .skills li .rat4, .skills li .rat5, .skills li .rat6, .skills li .rat7 {
-	background-image: url('../img/hr/rats.png');	
+	background-image: url('../../img/hr/rats.png');	
 	background-size: 123px 112px;
 	background-repeat: no-repeat;
 }
@@ -676,7 +676,7 @@ div.footer .cv {
 }
 div.footer .pdf_icon {
 	float:right;
-	background: url(../img/hr/pdf.png);
+	background: url(../../img/hr/pdf.png);
 	background-size: 14px 17px;
 	height: 17px;
 	width: 14px;
