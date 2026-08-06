@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-mode="boot">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sunday Island — Bart Jansen, as a cartoon game</title>
+<meta name="description" content="A bright, toon-shaded island you can run around. Every project, job, skill and school on Bart Jansen's CV is a thing you can walk up to and knock over. three.js on top of a hand-written physics engine.">
+<meta name="theme-color" content="#4fa8e8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'">
+<link rel="canonical" href="https://bart.je/v4/">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
+<link rel="stylesheet" href="css/app.css">
+<meta property="og:title" content="Sunday Island — a cartoon portfolio">
+<meta property="og:description" content="Run around a toon-shaded island where the level geometry is somebody's CV.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bart.je/v4/">
+</head>
+<body>
+
+<canvas data-canvas aria-hidden="true"></canvas>
+
+<div class="hud" data-hud></div>
+
+<!-- ───────────────────────────────────────────────────── touch controls ── -->
+<div class="touch" aria-hidden="true">
+  <div class="stick" data-stick><i data-knob></i></div>
+  <button class="jump" data-jump type="button">JUMP</button>
+</div>
+
+<!-- ─────────────────────────────────────────────────────── loading card ── -->
+<section class="boot" data-boot>
+  <div class="boot__card">
+    <p class="boot__kicker">bart.je · experiment four</p>
+    <h1 class="boot__title">Sunday<span>Island</span></h1>
+    <p class="boot__lede">
+      A small round island with a very small round man on it. Everything out
+      there — nineteen framed projects, twelve signposts, thirty-one skittles and
+      five little schools — is my CV, arranged as things you can walk into.
+    </p>
+    <ul class="boot__keys">
+      <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> walk</li>
+      <li><kbd>Shift</kbd> run</li>
+      <li><kbd>Space</kbd> jump</li>
+      <li><kbd>E</kbd> read</li>
+      <li><kbd>R</kbd> go home</li>
+      <li>drag to look</li>
+    </ul>
+    <p class="boot__note">three.js for the pixels · my own rigid-body engine for the physics</p>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────── no-webgl / reduced motion ── -->
+<main class="plain" data-fallback hidden>
+  <header class="plain__head">
+    <h1>Bart Jansen</h1>
+    <p class="plain__role">Technical Evangelist at Microsoft · Amsterdam</p>
+    <p class="plain__note" data-fallback-note></p>
+    <p class="plain__links">
+      <a href="mailto:hi@bart.je">hi@bart.je</a> ·
+      <a href="../cv.pdf">CV (PDF)</a> ·
+      <a href="../">the main site</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Work</h2>
+    <ul class="plain__grid" data-plain="projects"></ul>
+  </section>
+  <section>
+    <h2>Career</h2>
+    <ol class="plain__list" data-plain="jobs"></ol>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <p class="plain__tags" data-plain="skills"></p>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <ol class="plain__list" data-plain="education"></ol>
+  </section>
+</main>
+
+<noscript>
+  <style>.boot{display:none}.plain{display:block!important}</style>
+</noscript>
+
+<script type="module" src="js/fallback.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

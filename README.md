@@ -30,6 +30,58 @@ css/site.css           design system (OKLCH, cascade layers, logical properties)
 The page is a complete, readable document with JavaScript disabled, and
 `prefers-reduced-motion: reduce` turns the simulation off entirely.
 
+## Sunday Island (`v4/`)
+
+The same CV again, this time as a bright cartoon game. You run a small
+procedurally-modelled version of me around a round toon-shaded island: nineteen
+framed screenshots in the **work** gallery, twelve signposts along the **career**
+promenade, thirty-one labelled skittles racked up in the **skills** garden, five
+little schoolhouses on a mound, and a yard full of crates, barrels, dominoes and
+beach balls that exist purely to be charged into.
+
+This is the one build in the repo that uses a library: **three.js does the
+rendering**. The simulation does not change — it imports the exact same
+rigid-body engine from `v3/js/physics/`, so v4 is a clean swap of the
+presentation layer and a decent proof that the engine was worth writing. three
+is vendored into `v4/vendor/three/`, so there is still **no build step and no
+CDN**; the page is ES modules served straight off disk.
+
+Nothing is modelled in a DCC tool. The character is assembled from rounded boxes,
+spheres and capsules in `v4/js/char/bart.js` — a skull ellipsoid with every
+facial feature placed analytically on its surface, a swept-back hair shell, and a
+rig of plain `Group`s so animation is nothing but rotations (distance-driven
+walk cycle, squash-and-stretch on landing, quiff lag, timed blinks, and eyes that
+track whatever you are standing next to).
+
+```
+v4/vendor/three/            three.js r185, vendored (MIT, LICENSE included)
+v4/js/gfx/toon.js           palette, banded gradient ramps, inverted-hull outlines
+v4/js/gfx/shapes.js         the primitive kit: trees, rocks, grass, clouds, signs
+v4/js/gfx/sky.js            sky dome shader, light rig, drifting clouds
+v4/js/char/bart.js          the character: geometry, rig and animation
+v4/js/world/island.js       terrain, sea, paths, boulder guardrail, scenery
+v4/js/world/zones.js        the four zones and the playground, built from the CV
+v4/js/player.js             sphere-body controller and spring camera
+v4/js/hud.js                prompts, cards, discovery counter
+v4/js/app.js                scene assembly, fixed-step loop, prop syncing
+v4/js/fallback.js           fills the plain-HTML version from the same data
+```
+
+Toon shading is `MeshToonMaterial` with a nearest-filtered `DataTexture` ramp;
+outlines are inverted hulls expanded along the view-space normal so they keep a
+roughly constant screen weight. The player is a hidden sphere body with its spin
+zeroed every step and its facing driven by yaw, which gets gravity, slopes and
+collisions for free without any capsule-uprighting hacks. Only bodies tagged
+`terrain` push the camera in, so signposts never shove the view into your back.
+
+**Controls** — WASD or arrows to walk, Shift to run, Space to jump, E to read a
+sign, R to go home, drag to orbit, scroll to zoom. On touch there is a stick and
+a jump button.
+
+Without WebGL2, without JavaScript, or with `prefers-reduced-motion` set, the
+page degrades to a plain HTML version of the full CV built from the same content
+module (add `?play` to override the reduced-motion opt-out).
+
 ## THE YARD (`v3/`)
 
 The same CV, playable. A third-person physics sandbox where the portfolio *is*
