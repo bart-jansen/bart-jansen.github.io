@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE YARD — Bart Jansen's portfolio, as a physics sandbox</title>
+<meta name="description" content="A third-person physics playground where Bart Jansen's portfolio is the level geometry. Hand-written WebGL2 renderer, hand-written 3D rigid-body engine, zero dependencies.">
+<meta name="theme-color" content="#0a0c14">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'">
+<link rel="canonical" href="https://bart.je/v3/">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
+<link rel="stylesheet" href="css/game.css">
+<meta property="og:title" content="THE YARD — a playable portfolio">
+<meta property="og:description" content="Roll a marble through 19 projects, a career tower and a skill pit. No engine, no framework, no build step.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bart.je/v3/">
+</head>
+<body>
+
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<div class="ui" data-ui>
+
+  <!-- ─────────────────────────────────────────────── boot / start ── -->
+  <section class="boot" data-boot data-state="loading">
+    <div class="boot__inner">
+      <p class="boot__kicker">bart.je &middot; experiment three</p>
+      <h1 class="boot__title">THE&nbsp;YARD</h1>
+      <p class="boot__lede">
+        A portfolio you have to knock over. Nineteen projects stand as monoliths in a
+        walled arena; your CV is a tower of concrete slabs waiting to be demolished.
+        Everything you see is simulated — a rigid-body solver and a WebGL2 renderer,
+        both written from scratch for this page.
+      </p>
+
+      <div class="boot__bar" data-boot-bar><i></i></div>
+      <p class="boot__msg" data-boot-msg>starting up</p>
+
+      <button class="boot__start" data-start hidden>
+        <span>Enter the yard</span>
+        <small>click to capture the mouse</small>
+      </button>
+
+      <dl class="keys">
+        <div><dt>W A S D</dt><dd>roll</dd></div>
+        <div><dt>Space</dt><dd>jump &middot; double jump</dd></div>
+        <div><dt>Shift</dt><dd>sprint</dd></div>
+        <div><dt>Q</dt><dd>dash</dd></div>
+        <div><dt>Mouse&nbsp;1</dt><dd>telekinesis — grab &amp; throw</dd></div>
+        <div><dt>Mouse&nbsp;2</dt><dd>shockwave</dd></div>
+        <div><dt>Wheel</dt><dd>reel in / push out</dd></div>
+        <div><dt>E</dt><dd>fire the cannon where you look</dd></div>
+        <div><dt>F</dt><dd>slow motion</dd></div>
+        <div><dt>G</dt><dd>low gravity</dd></div>
+        <div><dt>T</dt><dd>respawn</dd></div>
+        <div><dt>R</dt><dd>rebuild the yard</dd></div>
+        <div><dt>M</dt><dd>mute</dd></div>
+        <div><dt>Esc</dt><dd>release the mouse</dd></div>
+      </dl>
+
+      <p class="boot__foot">
+        Best with a mouse and keyboard. <a href="/">Prefer the normal site?</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────── in game ── -->
+  <div class="hud" data-hud hidden>
+    <div class="reticle" data-reticle></div>
+
+    <div class="hud__tl">
+      <div class="counter">
+        <b data-found>0</b><span>/</span><span data-total>19</span>
+        <em>projects found</em>
+      </div>
+      <div class="meter" data-meter><i></i></div>
+    </div>
+
+    <div class="hud__tr">
+      <span class="stat"><b data-fps>60</b> fps</span>
+      <span class="stat"><b data-bodies>0/0</b> bodies awake</span>
+      <span class="stat"><b data-speed>0.0</b> m/s</span>
+    </div>
+
+    <div class="compass" data-compass></div>
+
+    <div class="card" data-card>
+      <img data-card-img alt="" decoding="async">
+      <div>
+        <h2 data-card-title></h2>
+        <p data-card-tags></p>
+      </div>
+    </div>
+
+    <p class="toast" data-toast></p>
+    <p class="hint" data-hint></p>
+
+    <div class="paused" data-paused hidden>
+      <div>
+        <h2>Paused</h2>
+        <p>Click anywhere to grab the mouse again.</p>
+        <p class="paused__links">
+          <a href="/">bart.je</a>
+          <a href="mailto:bart@bartj.be">bart@bartj.be</a>
+          <a href="https://github.com/bart-jansen" rel="me noopener">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ───────────────────────────────────────── fallback / real content ── -->
+<main class="fallback" data-fallback>
+  <h1>Bart Jansen</h1>
+  <p>
+    This page is an interactive 3D portfolio that needs WebGL2 and JavaScript.
+    Your browser can't run it, so here is the same content as plain text.
+    The <a href="/">main site</a> works everywhere.
+  </p>
+  <h2>Projects</h2>
+  <ul class="fallback__grid" data-project-grid></ul>
+  <p><a href="/">Full CV, work history and contact details &rarr;</a></p>
+</main>
+
+<noscript>
+  <style>.ui,#stage{display:none!important}.fallback{display:block!important}</style>
+</noscript>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
