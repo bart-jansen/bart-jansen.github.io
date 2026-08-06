@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-mode="boot">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World 1-1 — Bart Jansen, as a side-scroller</title>
+<meta name="description" content="A scroll-driven pixel platformer where the level geometry is a CV. Nineteen projects are warp pipes, twelve jobs are a staircase, thirty-one skills are coins. Hand-drawn sprites, a hand-written 5×7 font, no engine.">
+<meta name="theme-color" content="#4fa8e8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; media-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'">
+<link rel="canonical" href="https://bart.je/v5/">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
+<link rel="stylesheet" href="css/app.css">
+<meta property="og:title" content="World 1-1 — a CV you scroll through">
+<meta property="og:description" content="A pixel-art side-scroller where every project is a warp pipe and every skill is a coin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bart.je/v5/">
+</head>
+<body>
+
+<canvas data-canvas aria-hidden="true"></canvas>
+
+<!-- The page needs something tall to scroll through; this is it. -->
+<div class="spacer" data-spacer aria-hidden="true"></div>
+
+<!-- ───────────────────────────────────────────────────────── controls ── -->
+<div class="chrome">
+  <button class="chip" data-auto type="button" data-on="no" aria-pressed="false">AUTO-RUN</button>
+  <button class="chip" data-sound type="button" data-on="no" aria-pressed="false">SOUND</button>
+  <button class="chip" data-textcv type="button" aria-pressed="false">TEXT CV</button>
+</div>
+
+<!-- ─────────────────────────────────────────────────────── title card ── -->
+<section class="boot" data-boot>
+  <div class="card">
+    <p class="card__kicker">bart.je · experiment five</p>
+    <h1 class="card__title"><span>WORLD</span> 1-1</h1>
+    <p class="card__lede">
+      A CV you scroll through sideways. Nineteen projects are warp pipes with a
+      television bolted on, twelve jobs are a staircase up a mountain at dusk,
+      thirty-one skills are coins strung along jump arcs, and five schools are
+      little brick academies at dawn.
+    </p>
+    <p class="card__lede card__lede--tight">
+      The scrollbar is the controller. Everything you see is drawn one pixel at
+      a time — the character, the font, the sunset.
+    </p>
+    <ul class="card__keys">
+      <li><kbd>scroll</kbd> run</li>
+      <li><kbd>←</kbd><kbd>→</kbd> run</li>
+      <li><kbd>P</kbd> auto-run</li>
+      <li><kbd>Home</kbd> restart</li>
+    </ul>
+    <button class="card__go" data-play type="button">PRESS START</button>
+    <p class="card__note">no engine · no sprite sheets · 5×7 bitmap font</p>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────── end panel ── -->
+<aside class="end" data-end hidden>
+  <div class="card card--end">
+    <p class="card__kicker">course clear</p>
+    <h2 class="card__title card__title--small">THANK YOU BART!</h2>
+    <p class="card__lede">
+      But the printable CV is in another castle — it is right here, actually.
+    </p>
+    <p class="card__links">
+      <a href="mailto:hi@bart.je">hi@bart.je</a>
+      <a href="../cv.pdf">CV (PDF)</a>
+      <a href="../">the main site</a>
+      <a href="../v4/">the cartoon island</a>
+      <a href="../v3/">the 3D yard</a>
+    </p>
+  </div>
+</aside>
+
+<!-- ─────────────────────────────── no canvas / reduced motion / anchor ── -->
+<main class="plain" id="cv" data-fallback hidden>
+  <button class="plain__close" data-textclose type="button">CLOSE</button>
+  <header class="plain__head">
+    <h1>Bart Jansen</h1>
+    <p class="plain__role">Technical Evangelist at Microsoft · Amsterdam</p>
+    <p class="plain__note" data-fallback-note></p>
+    <p class="plain__links">
+      <a href="mailto:hi@bart.je">hi@bart.je</a> ·
+      <a href="../cv.pdf">CV (PDF)</a> ·
+      <a href="../">the main site</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Work</h2>
+    <ul class="plain__grid" data-plain="projects"></ul>
+  </section>
+  <section>
+    <h2>Career</h2>
+    <ol class="plain__list" data-plain="jobs"></ol>
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <p class="plain__tags" data-plain="skills"></p>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <ol class="plain__list" data-plain="education"></ol>
+  </section>
+</main>
+
+<noscript>
+  <style>.boot,.chrome,.spacer{display:none}.plain{display:block!important}</style>
+</noscript>
+
+<script type="module" src="js/fallback.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

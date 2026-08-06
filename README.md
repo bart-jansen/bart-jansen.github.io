@@ -30,6 +30,44 @@ css/site.css           design system (OKLCH, cascade layers, logical properties)
 The page is a complete, readable document with JavaScript disabled, and
 `prefers-reduced-motion: reduce` turns the simulation off entirely.
 
+## World 1-1 (`v5/`)
+
+A side-scrolling pixel platformer where **the page scroll is the level**. Scroll
+down and the camera runs right through a hand-drawn World 1-1 built entirely out
+of the CV: the skills are coins strung along jump arcs, the twelve jobs are a
+stone staircase climbing a dusk mountain, the nineteen projects are warp pipes
+with a CRT bolted on top, the five schools are little clock-tower academies at
+dawn, and the whole thing ends at a flagpole and a castle.
+
+Everything is drawn pixel by pixel on one 2D canvas: no engine, no sprite
+sheets, no webfont, no build step, zero dependencies. The character art, the
+enemies, the blocks, the hills and the 5x7 typeface are all string grids baked
+into offscreen canvases at boot.
+
+Because the scrollbar scrubs the level, Bart cannot be physically simulated —
+scroll away and back and he has to land in exactly the same place. So his
+height is a **pure function of x**: an ordered chain of flat runs and parabolic
+arcs, binary-searched per frame. Collection sweeps the whole interval he covered
+since the last frame, so flicking the scrollbar never skips a coin.
+
+```
+v5/js/pixel.js              palette, string-grid sprite compiler, flip/squash/tint
+v5/js/font.js               hand-written 5x7 bitmap font, baked per colour
+v5/js/sprites.js            all the art: Bart, goombas, blocks, hills, castles
+v5/js/path.js               the deterministic ground curve, y = f(x)
+v5/js/level.js              the CV compiled into seven chapters of level geometry
+v5/js/world.js              sky, parallax, terrain, props, creatures, particles
+v5/js/scroll.js             scroll <-> camera mapping, keyboard, auto-run
+v5/js/hud.js                status bar, progress, chapter cards, message box
+v5/js/audio.js              six WebAudio blips, muted until you ask for them
+v5/js/main.js               boot, capability detection, frame loop
+v5/js/fallback.js           fills the plain-HTML version from the same data
+```
+
+Press **P** for auto-run, or hit **TEXT CV** for the whole résumé as a plain
+document. `prefers-reduced-motion: reduce` and any missing capability skip the
+canvas entirely and show that document instead.
+
 ## Sunday Island (`v4/`)
 
 The same CV again, this time as a bright cartoon game. You run a small
