@@ -203,11 +203,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//preload hover-on images
 	preload([
-		'img/hr/contact-icon-active.png',
-		'img/hr/education-icon-active.png',
-		'img/hr/portfolio-icon-active.png',
-		'img/hr/profile-icon-active.png',
-		'img/hr/resume-icon-active.png'
+		'../img/hr/contact-icon-active.png',
+		'../img/hr/education-icon-active.png',
+		'../img/hr/portfolio-icon-active.png',
+		'../img/hr/profile-icon-active.png',
+		'../img/hr/resume-icon-active.png'
 	]);
 });
 
